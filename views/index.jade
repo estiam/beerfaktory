@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  table
+    thead
+      th Name
+      th Brewery
+      th Type
+      th 
+      th
+    tbody
+      each beer in beers
+        tr
+          td
+            a(href="/edit/#{beer._id}") #{beer.name}
+          td= beer.brewery
+          td= beer.type
+          td= beer.tried ? "Testé" : "Pas Testé"
+          td
+            a(href="/delete/#{beer._id}") Delete
+
+

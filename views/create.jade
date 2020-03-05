@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  form(method='POST', action='/create').form-horizontal
+    fieldset
+      legend Add beer
+      .form-group
+        label.col-md-4.control-label(for='name') Name
+        .col-md-4
+          input#name.form-control.input-md(name='name', type='text', placeholder='1664')
+      .form-group
+        label.col-md-4.control-label(for='brewery') Brewery
+        .col-md-4
+          input#brewery.form-control.input-md(name='brewery', type='text', placeholder='Brewdog, etc.')
+      .form-group
+        label.col-md-4.control-label(for='type') Type
+        .col-md-4
+          input#type.form-control.input-md(name='type', type='text', placeholder='Blond, IPA, Pale Ale')
+      .form-group
+        label.col-md-4.control-label(for='') Tried
+        .col-md-4
+          label.checkbox-inline(for='-0')
+            input#-0(type='checkbox', name='', value='')
+            |       I did
+      .form-group
+        label.col-md-4.control-label(for='')
+        .col-md-4
+          input(type="submit", value="submit").btn.btn-primary
